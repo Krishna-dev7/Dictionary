@@ -1,0 +1,140 @@
+* {
+    font-family: 'Poppins';
+}
+
+.tag {
+    background-color: palegreen;
+    color: black;
+    border-radius: 4px;
+    padding: 6px 8px;
+}
+
+#body {
+    background-color: rgb(153, 91, 211);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    width: 100vw;
+}
+
+#search {
+    display: inline-block;
+    width: 100%;
+    border: none;
+    text-indent: 30px;
+    height: 40px;   
+    /* border-bottom: 2px solid black; */
+}
+
+#search:focus {
+    border: none;
+    outline: none;
+    border-bottom: 2px solid blueviolet;
+}
+
+label {
+    position: absolute;
+    top: 8px;
+    left: 5px;
+    z-index : 5;
+}
+
+.containers {
+    width: 60%;
+    min-height: 70vh;
+    /* margin: 50px auto; */
+    box-sizing: border-box;
+    padding: 10px 10px;
+    background-color: white ;
+    box-shadow: 5px 5px 60px blueviolet ;
+}
+
+#search-btn {
+    width: 100px;
+    height: 40px;
+    background-color: rgb(153, 91, 211);
+    color: white;
+    /* margin: 30px; */
+    /* margin-left: 78%; */
+}
+
+*::selection {
+    color: white;
+    background-color: black;
+}
+
+#search-box {
+    width: 70%;
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.top-bar {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    gap: 30px;
+    padding: 5px 10px;
+}
+
+.result {
+    border-top: 2px solid black;
+    width: 100%;
+    margin: 20px auto 20px;
+    padding-top: 10px;
+}
+
+i {
+    font-weight: bold;
+}
+
+h3 {
+    /* font-family: 'JetBrains Mono'; */
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+
+#meaning {
+    gap: 20px;
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    text-align: start;
+    padding: 5px 10px;
+}
+
+.phonetics {
+    padding: 5px 10px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 40px;
+}
+i:hover {
+    cursor: pointer;
+}
+
+#voice-icon {
+    font-size: 1.5rem;
+}
+
+span {
+    padding: 6px 10px;
+}
+
+@media screen and (max-width: 400px) {
+    .containers {
+        width: 80%;
+        font-size: 0.7rem;
+    }
+}
+@media screen and (max-width: 1000px) {
+    .containers {
+        width: 80%;
+        font-size: 0.85rem;
+    }
+}
