@@ -40,7 +40,10 @@ function updateResult(resData){
     $('#word p').text(resData.phonetics[0].text);
     $('audio').attr('src',resData.phonetics[0].audio);
     console.log(resData.phonetics[0].audio)
-    $('#voice-icon').show().click(() => {
+    $('#voice-icon')
+    .show(() => {
+        $('audio')[0].play();
+    }).click(() => {
         $('audio')[0].play();
     });
 }
