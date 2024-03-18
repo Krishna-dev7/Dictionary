@@ -27,6 +27,7 @@ function updateResult(resData){
         console.log("Response data is not an array");
         return;
     }
+    
     // add meanings 
     let _innerHTML = `<p id="meaning">
         <span class="tag"> Meaning: </span>
@@ -35,11 +36,12 @@ function updateResult(resData){
     $('#meaning').remove();
     $('.result').append(_innerHTML);
 
-    // add phonemetics
+    // add phonetics
     $('#word h3').text(searchVal);
     $('#word p').text(resData.phonetics[0].text);
+
+    // voice feature
     $('audio').attr('src',resData.phonetics[0].audio);
-    console.log(resData.phonetics[0].audio)
     $('#voice-icon')
     .show(() => {
         $('audio')[0].play();
